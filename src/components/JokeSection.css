@@ -1,0 +1,159 @@
+.joke-section {
+    padding: 40px 24px 80px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.joke-container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.joke-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.joke-icon-wrapper {
+    font-size: 4rem;
+    line-height: 1;
+    margin-bottom: 10px;
+    color: #00d4ff;
+    text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+}
+
+.joke-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #3b82f6;
+    /* Blueish */
+}
+
+.joke-title .highlight {
+    display: block;
+    color: #00d4ff;
+    /* Cyan */
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+}
+
+.joke-subtitle {
+    font-size: 1.2rem;
+    color: #e2e8f0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+
+.joke-card-wrapper {
+    width: 100%;
+    max-width: 700px;
+    min-height: 180px;
+    /* Prevent layout shift */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joke-card {
+    background: rgba(20, 20, 25, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid #a3e635;
+    /* Neon Green/Yellow border */
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(163, 230, 53, 0.1);
+    text-align: left;
+}
+
+.joke-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-size: 1.2rem;
+}
+
+.joke-question {
+    color: #facc15;
+    /* Yellow/Orange */
+    font-weight: 500;
+}
+
+.q-label {
+    color: #facc15;
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+.joke-answer {
+    color: #a3e635;
+    /* Neon Green */
+    font-weight: 500;
+}
+
+.a-label {
+    color: #a3e635;
+    font-weight: 800;
+    margin-right: 8px;
+}
+
+.joke-actions {
+    margin-top: 20px;
+}
+
+.refresh-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 32px;
+    background: #e2e8f0;
+    color: #0f172a;
+    border: none;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.refresh-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+}
+
+.refresh-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .joke-title {
+        font-size: 2.5rem;
+    }
+
+    .joke-subtitle {
+        font-size: 1rem;
+    }
+
+    .joke-card {
+        padding: 24px;
+    }
+
+    .joke-content {
+        font-size: 1rem;
+    }
+}

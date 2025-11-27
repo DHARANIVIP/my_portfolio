@@ -1,0 +1,109 @@
+.skill-marquee-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 24px;
+    height: 320px;
+    /* Fixed height for the card */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-marquee-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent, #00d4ff);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.marquee-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+.marquee-scroll-container {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    /* Masking to fade out at top/bottom */
+}
+
+.marquee-scroll-track {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    animation: marquee-vertical-scroll 15s linear infinite;
+}
+
+.skill-marquee-card:hover .marquee-scroll-track {
+    animation-play-state: paused;
+}
+
+.marquee-skill-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: background 0.2s;
+}
+
+.marquee-skill-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.marquee-skill-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 8px currentColor;
+    flex-shrink: 0;
+}
+
+.marquee-skill-name {
+    font-size: 0.95rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+/* Gradient Masks */
+.marquee-mask-top,
+.marquee-mask-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.marquee-mask-top {
+    top: 0;
+    background: linear-gradient(to bottom, var(--bg, #000000), transparent);
+}
+
+.marquee-mask-bottom {
+    bottom: 0;
+    background: linear-gradient(to top, var(--bg, #000000), transparent);
+}
+
+@keyframes marquee-vertical-scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        /* We scroll by 1/4th because we quadrupled the content */
+        transform: translateY(-25%);
+    }
+}
