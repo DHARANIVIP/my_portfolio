@@ -7,6 +7,7 @@ import {
 import { RiFileExcel2Fill, RiFileWord2Fill, RiFilePpt2Fill } from 'react-icons/ri'
 import { SectionHeading } from './SectionHeading'
 import { SkillMarquee } from './SkillMarquee'
+import { CodingStats } from './CodingStats'
 import './Skills.css'
 
 export function Skills() {
@@ -69,49 +70,55 @@ export function Skills() {
   ]
 
   return (
-    <section className="section skills-section" id="skills">
-      <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <SectionHeading
-          title="Top Skills"
-          eyebrow="Expertise"
-        />
-      </div>
+    <>
+      {/* Coding Stats Section */}
+      <CodingStats />
 
-      <div className="skills-grid-container">
-        {skills.map((skill, index) => (
-          <motion.div
-            key={skill.name}
-            className="skill-card-wrapper"
-            style={{ '--skill-color': skill.color }}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.05, duration: 0.5 }}
-          >
-            <div className="skill-card-content">
-              <skill.icon className="skill-icon" style={{ color: skill.color }} />
-              <span className="skill-name">{skill.name}</span>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      {/* Skills Section */}
+      <section className="section skills-section" id="skills">
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <SectionHeading
+            title="Top Skills"
+            eyebrow="Expertise"
+          />
+        </div>
 
-      {/* Vertical Marquee Section */}
-      <div className="skills-marquee-section" style={{ marginTop: '80px' }}>
-        <div className="skills-grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
-          {skillCategories.map((category, index) => (
+        <div className="skills-grid-container">
+          {skills.map((skill, index) => (
             <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
+              key={skill.name}
+              className="skill-card-wrapper"
+              style={{ '--skill-color': skill.color }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
+              transition={{ delay: index * 0.05, duration: 0.5 }}
             >
-              <SkillMarquee category={category} />
+              <div className="skill-card-content">
+                <skill.icon className="skill-icon" style={{ color: skill.color }} />
+                <span className="skill-name">{skill.name}</span>
+              </div>
             </motion.div>
           ))}
         </div>
-      </div>
-    </section>
+
+        {/* Vertical Marquee Section */}
+        <div className="skills-marquee-section" style={{ marginTop: '80px' }}>
+          <div className="skills-grid-container" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+            {skillCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+              >
+                <SkillMarquee category={category} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   )
 }
