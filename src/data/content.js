@@ -193,7 +193,7 @@ export const projectContent = [
   },
 
   {
-    title: 'Nexus AI Chatbot',
+    title: 'Nexus AI Chatbot using API',
     description:
       'An intelligent AI-powered chatbot built with advanced natural language processing to provide seamless conversational experiences and smart assistance.',
     stack: ['React', 'AI/ML', 'Vercel'],
