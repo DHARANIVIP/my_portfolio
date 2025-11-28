@@ -4,6 +4,7 @@ import { Footer } from '../components/Footer'
 import { AnimatedBackground } from '../components/AnimatedBackground'
 import { ScrollToTop } from '../components/ScrollToTop'
 import { StarBackground } from '../components/StarBackground'
+import { FloatingDock } from '../components/FloatingDock'
 
 
 export function RootLayout() {
@@ -20,6 +21,7 @@ export function RootLayout() {
       <main>
         <Outlet />
       </main>
+      <FloatingDock />
       <Footer />
     </div>
   )
