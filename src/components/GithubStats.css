@@ -1,0 +1,185 @@
+.github-stats-section {
+    padding: 4rem 2rem;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.github-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.github-icon-large {
+    font-size: 3rem;
+    color: var(--primary-color, #00d2ff);
+    filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.5));
+}
+
+.github-header h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.github-header .highlight {
+    color: var(--primary-color, #00d2ff);
+    text-shadow: 0 0 20px rgba(0, 210, 255, 0.3);
+}
+
+.github-content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-color, #00d2ff);
+}
+
+.profile-info h3 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #fff;
+}
+
+.profile-link {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.stat-label {
+    color: #ccc;
+    font-size: 0.85rem;
+}
+
+.stat-value {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.visit-btn {
+    display: block;
+    text-align: center;
+    background: #fff;
+    color: #000;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s, background 0.2s;
+    font-size: 0.9rem;
+}
+
+.visit-btn:hover {
+    transform: translateY(-2px);
+    background: var(--primary-color, #00d2ff);
+}
+
+.contribution-graph-container {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contribution-graph-container h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+    color: #ccc;
+}
+
+.calendar-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+}
+
+.calendar-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.calendar-wrapper::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+}
+
+.calendar-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .github-content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        max-width: 100%;
+    }
+
+    .contribution-graph-container {
+        width: 100%;
+    }
+}

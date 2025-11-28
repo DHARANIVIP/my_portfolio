@@ -12,13 +12,13 @@ const CursorContainer = styled.div`
 
 const CursorDot = styled.div`
   position: absolute;
-  width: ${props => props.isHovered ? '40px' : '20px'};
-  height: ${props => props.isHovered ? '40px' : '20px'};
+  width: ${props => props.$isHovered ? '40px' : '20px'};
+  height: ${props => props.$isHovered ? '40px' : '20px'};
   background-color: #00d4ff;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
-  opacity: ${props => props.isVisible ? 1 : 0};
+  opacity: ${props => props.$isVisible ? 1 : 0};
 `;
 
 const CustomCursor = () => {
@@ -64,8 +64,8 @@ const CustomCursor = () => {
     return (
         <CursorContainer ref={cursorRef}>
             <CursorDot
-                isVisible={isVisible}
-                isHovered={isHovered}
+                $isVisible={isVisible}
+                $isHovered={isHovered}
                 style={{
                     left: mousePosition.x,
                     top: mousePosition.y,
