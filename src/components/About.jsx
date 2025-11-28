@@ -2,8 +2,29 @@ import { motion } from 'framer-motion'
 import { aboutContent, heroContent, statsContent, timelineContent } from '../data/content'
 import { SectionHeading } from './SectionHeading'
 import { FaGraduationCap, FaCode, FaRocket, FaUser } from 'react-icons/fa'
+import './About.css'
+import { LinkedInPosts } from './LinkedInPosts'
 
 export function About() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2
+            }
+        }
+    }
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" }
+        }
+    }
+
     return (
         <section className="section" id="about">
             <div className="about-container">
@@ -89,21 +110,24 @@ export function About() {
                         description="Key attributes and focus areas."
                     />
 
-                    <div className="bento-grid">
+                    <motion.div
+                        className="bento-grid"
+                        variants={containerVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, margin: "-100px" }}
+                    >
                         {/* Personal Details Card */}
                         <motion.div
                             className="bento-card"
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.5 }}
-                            viewport={{ once: true }}
+                            variants={itemVariants}
                         >
                             <h3><FaUser /> Personal Info</h3>
-                            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
+                            <ul className="personal-info-list">
                                 {aboutContent.details.map((detail) => (
-                                    <li key={detail.label} style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '8px' }}>
-                                        <span style={{ color: 'var(--muted)' }}>{detail.label}</span>
-                                        <span style={{ fontWeight: 500, textAlign: 'right' }}>{detail.value}</span>
+                                    <li key={detail.label} className="personal-info-item">
+                                        <span className="info-label">{detail.label}</span>
+                                        <span className="info-value">{detail.value}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -114,10 +138,7 @@ export function About() {
                             <motion.div
                                 key={index}
                                 className="bento-card"
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ delay: 0.2 + (index * 0.1), duration: 0.5 }}
-                                viewport={{ once: true }}
+                                variants={itemVariants}
                             >
                                 <h3>
                                     {index === 0 ? <FaCode /> : index === 1 ? <FaRocket /> : <FaGraduationCap />}
@@ -126,8 +147,11 @@ export function About() {
                                 <p>{highlight}</p>
                             </motion.div>
                         ))}
-                    </div>
+                    </motion.div>
                 </div>
+
+                {/* LinkedIn Section */}
+                <LinkedInPosts />
 
             </div>
         </section>

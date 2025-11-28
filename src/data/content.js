@@ -285,3 +285,29 @@ export const contactContent = {
 
 
 
+export const linkedInPosts = [
+  {
+    id: 1,
+    content: "I’m glad to share that I successfully participated in the One Day Offline Workshop on Large Language Models in Generative AI, organized by the Department of Information Security and Department of Database Systems, SCOPE, Vellore Institute of Technology, Vellore. It was an insightful session gaining knowledge on LLMs and their applications...",
+    date: "5 days ago",
+    likes: 19,
+    comments: 0,
+    url: "https://www.linkedin.com/posts/dharani-v-92194a314_generativeai-llm-artificialintelligence-activity-7398210691888984064-uP9-?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE_fuKkBCQjNben9vt3n4WOY3YQt6Aa8Tjg",
+  },
+  {
+    id: 2,
+    content: "I’m beyond excited to share that I’ve been awarded the Google Cloud Certificate of Excellence 🏆 after successfully completing the Google Cloud Arcade Facilitator Program 2025 (Cohort – 1)! Journey Highlights: 🎮 Completed 10 Arcade Games, 🧠 Solved 8 Trivia Challenges, 🏅 Earned 44 Skill Badges, 📜 Completed 16 Lab-based Courses, 🔥 Achieved Milestone 4 – Ranger Tier with 67 points. This journey has been an incredible learning experience — strengthening my skills in Google Cloud technologies, data engineering, AI/ML, and cloud infrastructure.",
+    date: "1 month ago",
+    likes: 48,
+    comments: 4,
+    url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7397633897011765248",
+  },
+  {
+    id: 3,
+    content: "Artificial Intelligence often feels like a buzzword, but once I stepped into the “AI for Beginners” course by HP LIFE, it turned into something more meaningful. What I discovered: 🔹 AI isn’t about replacing humans – it’s about amplifying what we can do. 🔹 Data is the quiet architect behind every smart decision. 🔹 Ethics in AI isn’t a side note – it’s the foundation of trust. This journey reshaped the way I look at technology: not just as a tool, but as a responsibility. Today, I proudly add this milestone to my learning path. 👉 How can we use AI not just to build smarter systems, but a smarter, more human world? Grateful to HP LIFE for this opportunity! #AIForBeginners #HPFoundation #ArtificialIntelligence",
+    date: "Sep 2025",
+    likes: 23,
+    comments: 2,
+    url: "https://www.linkedin.com/in/dharani-v-92194a314",
+  }
+]
