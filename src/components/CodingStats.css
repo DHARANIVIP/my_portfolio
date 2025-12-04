@@ -30,21 +30,6 @@
     filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
 }
 
-.coding-stats-title {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin: 0 0 12px 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-}
-
-.coding-text {
-    color: #00d4ff;
-    text-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
-}
-
 .stats-text {
     background: linear-gradient(135deg, #00d4ff, #0099ff);
     -webkit-background-clip: text;
@@ -71,7 +56,7 @@
 }
 
 .stat-card {
-    background: #000000;
+    background: var(--bg);
     border: 6px solid rgba(0, 212, 255, 0.2);
     border-radius: 16px;
     padding: 24px 20px;

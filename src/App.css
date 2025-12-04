@@ -109,7 +109,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 24px;
-  background: rgba(5, 6, 10, 0.9);
+  background: var(--bg-elevated);
   backdrop-filter: blur(18px);
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -335,7 +335,7 @@ main {
 .hero__glow {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(5, 6, 10, 0) 0%, rgba(5, 6, 10, 0.85) 100%);
+  background: linear-gradient(180deg, transparent 0%, var(--bg) 100%);
 }
 
 /* Home Page Hero Design - Scrollable */
@@ -400,6 +400,11 @@ main {
   mix-blend-mode: lighten;
 }
 
+[data-theme='light'] .hero-home__avatar {
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.15));
+}
+
 .hero-home__title {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   font-weight: 700;
@@ -435,7 +440,7 @@ main {
   margin-top: 80px;
   padding: 40px 0 20px;
   border-top: 1px solid var(--border);
-  background: rgba(5, 6, 10, 0.8);
+  background: var(--bg-elevated);
   backdrop-filter: blur(10px);
 }
 
@@ -608,7 +613,7 @@ main {
 }
 
 .skill-category-card {
-  background: #000000;
+  background: var(--bg);
   border: 3px solid rgba(0, 212, 255, 0.2);
   border-radius: 16px;
   padding: 24px;
@@ -668,7 +673,7 @@ main {
 }
 
 .interest-card {
-  background: #000000;
+  background: var(--bg);
   border: 2px solid;
   border-radius: 16px;
   padding: 24px;
@@ -970,7 +975,7 @@ main {
 }
 
 .hero-project-card {
-  background: #000000;
+  background: var(--bg);
   border: 2px solid rgba(0, 212, 255, 0.2);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -1152,7 +1157,7 @@ main {
   gap: 40px;
   align-items: center;
   padding: 40px;
-  background: #000000;
+  background: var(--bg);
   border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: var(--radius-lg);
   backdrop-filter: blur(10px);
@@ -1322,7 +1327,7 @@ main {
 }
 
 .hero-stats__card {
-  background: #000000;
+  background: var(--bg);
   border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: var(--radius-lg);
   padding: 40px 30px;
@@ -1606,7 +1611,7 @@ main {
 .card-glass {
   position: absolute;
   inset: 0;
-  background: #000000;
+  background: var(--bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 0;

@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { FaPlay, FaPause, FaSun, FaMoon, FaFont } from 'react-icons/fa'
-import { MdTranslate } from 'react-icons/md'
 import { useTheme } from '../context/ThemeContext'
 import './FloatingDock.css'
 
@@ -80,11 +79,6 @@ export function FloatingDock() {
                 {/* Theme Toggle */}
                 <button className="dock-btn theme-btn" onClick={toggleTheme} aria-label="Toggle Theme">
                     {theme === 'dark' ? <FaMoon /> : <FaSun />}
-                </button>
-
-                {/* Translate Button (Placeholder) */}
-                <button className="dock-btn translate-btn" aria-label="Translate">
-                    <MdTranslate />
                 </button>
 
                 {/* Font Size Toggle Button */}

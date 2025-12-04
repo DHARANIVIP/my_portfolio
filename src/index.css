@@ -23,6 +23,20 @@
   --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
+[data-theme='light'] {
+  color-scheme: light;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  --bg: #ffffff;
+  --bg-elevated: rgba(255, 255, 255, 0.9);
+  --fg: #1a1a1a;
+  --muted: rgba(0, 0, 0, 0.6);
+  --accent: #0077cc;
+  --accent-secondary: #005fa3;
+  --border: rgba(0, 0, 0, 0.1);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
 *,
 *::before,
 *::after {
@@ -34,6 +48,7 @@ body {
   min-height: 100vh;
   background: var(--bg);
   cursor: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Show default cursor on touch devices */
