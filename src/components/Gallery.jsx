@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { galleryContent, certificateContent } from '../data/content'
 import { SectionHeading } from './SectionHeading'
@@ -6,6 +6,39 @@ import { FaTimes } from 'react-icons/fa'
 
 export function Gallery() {
   const [selectedImage, setSelectedImage] = useState(null)
+
+  // Lock scroll when modal is open
+  useEffect(() => {
+    if (selectedImage) {
+      // Save current scroll position
+      const scrollY = window.scrollY
+      document.body.style.position = 'fixed'
+      document.body.style.top = `-${scrollY}px`
+      document.body.style.width = '100%'
+      document.body.style.overflow = 'hidden'
+
+      // Return cleanup function
+      return () => {
+        // Restore scroll position
+        const scrollY = document.body.style.top
+        document.body.style.position = ''
+        document.body.style.top = ''
+        document.body.style.width = ''
+        document.body.style.overflow = ''
+
+        // Restore scroll position
+        if (scrollY) {
+          window.scrollTo(0, parseInt(scrollY || '0') * -1)
+        }
+      }
+    } else {
+      // Ensure body styles are cleared when no modal is open
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      document.body.style.overflow = ''
+    }
+  }, [selectedImage])
 
   return (
     <section className="section" id="gallery">

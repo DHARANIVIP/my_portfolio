@@ -115,7 +115,7 @@ export function CodingStats() {
             key={stat.label}
             className="stat-card"
             variants={itemVariants}
-            whileHover={{ y: -8, scale: 1.05 }}
+            whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
             <stat.icon className="stat-icon" />

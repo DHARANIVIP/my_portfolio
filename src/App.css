@@ -609,7 +609,7 @@ main {
 
 .skill-category-card {
   background: #000000;
-  border: 1px solid var(--card-border);
+  border: 3px solid rgba(0, 212, 255, 0.2);
   border-radius: 16px;
   padding: 24px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -861,7 +861,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: -75px auto 20px;
+  margin: -160px auto 20px;
   animation: bounce-up 2s ease-in-out infinite;
   transition: transform 0.2s ease;
 }
@@ -1593,7 +1593,7 @@ main {
   /* Gentle elevation */
   box-shadow:
     0 20px 40px -10px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(255, 255, 255, 0.05);
+    0 0 0 6px rgba(255, 255, 255, 0.05);
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -1781,7 +1781,7 @@ main {
   inset: 0;
   background: rgba(12, 15, 28, 0.7);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 212, 255, 0.2);
+  border: 6px solid rgba(0, 212, 255, 0.2);
   border-radius: var(--radius-md);
   transition: all 0.3s ease;
 }
@@ -2775,6 +2775,11 @@ main {
 }
 
 /* About Page Redesign */
+#about {
+  padding-top: 0;
+  margin-top: -40px;
+}
+
 .about-container {
   display: flex;
   flex-direction: column;
@@ -2792,7 +2797,7 @@ main {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid var(--border);
+  border: 3px solid var(--border);
   aspect-ratio: 3/4;
 }
 
@@ -2837,7 +2842,7 @@ main {
   gap: 24px;
   padding: 40px;
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
+  border: 3px solid var(--border);
   border-radius: var(--radius-lg);
   backdrop-filter: blur(10px);
 }
@@ -2918,7 +2923,7 @@ main {
 .bento-card {
   padding: 32px;
   background: var(--bg-elevated);
-  border: 1px solid var(--border);
+  border: 3px solid var(--border);
   border-radius: var(--radius-lg);
   transition: transform 0.3s ease;
 }
@@ -3028,7 +3033,7 @@ main {
 
 /* Hero Interests Section */
 .hero-interests {
-  margin-top: 60px;
+  margin-top: 0px;
   padding: 50px 24px;
 }
 
@@ -3324,7 +3329,7 @@ main {
   padding: 10px 12px;
   background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 6px solid rgba(255, 255, 255, 0.05);
   transition: all 0.2s ease;
 }
 

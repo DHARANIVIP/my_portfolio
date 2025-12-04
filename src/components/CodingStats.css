@@ -71,8 +71,8 @@
 }
 
 .stat-card {
-    background: rgba(5, 10, 20, 0.5);
-    border: 1px solid rgba(0, 212, 255, 0.2);
+    background: #000000;
+    border: 6px solid rgba(0, 212, 255, 0.2);
     border-radius: 16px;
     padding: 24px 20px;
     text-align: center;

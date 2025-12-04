@@ -215,7 +215,7 @@ export const galleryContent = [
     image: cloud,
   },
   {
-    title: 'Streamlit Launch',
+    title: 'Duolingo',
     description: 'Deploying the farmer helpdesk MVP to gather feedback quickly.',
     image: duolingo,
   },
