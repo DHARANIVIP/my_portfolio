@@ -81,7 +81,7 @@ export function GithubStats() {
                             <span className="stat-value">{userStats.following}</span>
                         </div>
                         <div className="stat-item">
-                            <span className="stat-label">Total Stars</span>
+                            <span className="stat-label">Total</span>
                             <span className="stat-value">{userStats.total_stars}</span>
                         </div>
                     </div>

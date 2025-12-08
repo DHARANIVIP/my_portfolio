@@ -26,13 +26,14 @@ export function Footer() {
                 className="footer__social-icon"
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ delay: index * 0.1, duration: 0.3 }}
+                transition={{ delay: index * 0.1, duration: 0.2 }}
                 viewport={{ once: true }}
                 whileHover={{
                   scale: 1.2,
                   y: -5,
                   boxShadow: "0 0 20px rgba(0, 212, 255, 0.6)",
-                  borderColor: "#00d4ff"
+                  borderColor: "#00d4ff",
+                  transition: { duration: 0.2 }
                 }}
                 whileTap={{ scale: 0.9 }}
                 title={social.label}
