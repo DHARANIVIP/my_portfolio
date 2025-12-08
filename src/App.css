@@ -2821,7 +2821,7 @@ main {
 .about-content h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   margin-bottom: 24px;
-  background: linear-gradient(135deg, #fff, #888);
+  background: linear-gradient(135deg, var(--fg), var(--muted));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -3063,18 +3063,38 @@ main {
 }
 
 .interest-card {
-  background: rgba(12, 15, 28, 0.8);
+  background: var(--bg);
   border: 2px solid rgba(0, 212, 255, 0.2);
   border-radius: var(--radius-lg);
-  padding: 35px 30px;
-  text-align: center;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding: 30px;
+  text-align: left;
+  transition: all 0.4s ease;
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.interest-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 153, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
 }
 
 .interest-card:hover {
+  transform: translateY(-8px);
   border-color: rgba(0, 212, 255, 0.5);
-  box-shadow: 0 12px 40px rgba(0, 212, 255, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+}
+
+.interest-card:hover::before {
+  opacity: 1;
 }
 
 .interest-card__icon {
@@ -3082,8 +3102,10 @@ main {
   color: #00d4ff;
   margin-bottom: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 .interest-card__title {
@@ -3092,6 +3114,8 @@ main {
   color: var(--fg);
   margin-bottom: 15px;
   letter-spacing: -0.01em;
+  position: relative;
+  z-index: 2;
 }
 
 .interest-card__description {
@@ -3099,6 +3123,8 @@ main {
   line-height: 1.6;
   color: var(--muted);
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 768px) {

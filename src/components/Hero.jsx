@@ -235,7 +235,6 @@ export function Hero() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.1, duration: 0.5 }}
                                 viewport={{ once: true }}
-                                whileHover={{ scale: 1.05, y: -10 }}
                             >
                                 <div className="interest-card__icon">
                                     <SiTensorflow />
@@ -252,7 +251,6 @@ export function Hero() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: 0.2, duration: 0.5 }}
                                 viewport={{ once: true }}
-                                whileHover={{ scale: 1.05, y: -10 }}
                             >
                                 <div className="interest-card__icon">
                                     <SiPython />
@@ -269,7 +267,6 @@ export function Hero() {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ delay: 0.3, duration: 0.5 }}
                                 viewport={{ once: true }}
-                                whileHover={{ scale: 1.05, y: -10 }}
                             >
                                 <div className="interest-card__icon">
                                     <SiReact />

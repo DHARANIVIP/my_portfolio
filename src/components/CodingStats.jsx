@@ -119,8 +119,10 @@ export function CodingStats() {
             transition={{ type: "spring", stiffness: 300 }}
           >
             <stat.icon className="stat-icon" />
-            <div className="stat-value">{stat.value}</div>
-            <div className="stat-label">{stat.label}</div>
+            <div className="stat-info">
+              <div className="stat-value">{stat.value}</div>
+              <div className="stat-label">{stat.label}</div>
+            </div>
           </motion.div>
         ))}
       </motion.div>
