@@ -1960,6 +1960,12 @@ main {
   background: rgba(12, 15, 28, 0.8);
 }
 
+[data-theme='light'] .project-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
 .project-card__header {
   display: flex;
   justify-content: space-between;
@@ -2060,6 +2066,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
+
+[data-theme='light'] .blog-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
 }
 
 .blog-card__tag {
@@ -2215,6 +2227,12 @@ main {
   overflow: hidden;
 }
 
+[data-theme='light'] .spotlight-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
 .spotlight-card>* {
   position: relative;
   z-index: 1;
@@ -2249,6 +2267,12 @@ main {
   background: rgba(12, 16, 30, 0.8);
 }
 
+[data-theme='light'] .timeline-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
 .timeline-card span {
   font-size: 0.85rem;
   letter-spacing: 0.1em;
@@ -2270,6 +2294,12 @@ main {
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background: rgba(10, 12, 24, 0.85);
+}
+
+[data-theme='light'] .ring-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
 }
 
 .ring-card__meter {
@@ -2309,6 +2339,12 @@ main {
   padding: 20px;
   background: rgba(13, 15, 30, 0.85);
   text-align: center;
+}
+
+[data-theme='light'] .highlight-grid article {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
 }
 
 .highlight-grid h3 {
@@ -2612,6 +2648,12 @@ main {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
   height: 100%;
+}
+
+[data-theme='light'] .certificate-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
 }
 
 .certificate-card:hover {
@@ -2972,6 +3014,12 @@ main {
   border-radius: var(--radius-lg);
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+}
+
+[data-theme='light'] .hero-stats-card {
+  background: var(--bg-elevated);
+  border-color: var(--border);
+  box-shadow: var(--shadow-soft);
 }
 
 .hero-stats-card:hover {

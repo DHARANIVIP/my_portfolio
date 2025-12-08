@@ -58,6 +58,12 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+[data-theme='light'] .profile-card {
+    background: var(--bg-elevated);
+    border-color: var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
 .profile-header {
     display: flex;
     align-items: center;
@@ -88,6 +94,10 @@
     text-transform: uppercase;
 }
 
+[data-theme='light'] .profile-info h3 {
+    color: var(--fg);
+}
+
 .profile-link {
     color: #888;
     text-decoration: none;
@@ -105,6 +115,11 @@
     padding: 1.5rem;
     border-radius: 16px;
     margin-top: auto;
+}
+
+[data-theme='light'] .stats-grid {
+    background: rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border);
 }
 
 .stat-item {
@@ -129,6 +144,10 @@
     font-size: 1.5rem;
 }
 
+[data-theme='light'] .stat-value {
+    color: var(--fg);
+}
+
 .visit-btn {
     display: block;
     text-align: center;
@@ -149,6 +168,15 @@
     background: #f0f0f0;
 }
 
+[data-theme='light'] .visit-btn {
+    background: #000;
+    color: #fff;
+}
+
+[data-theme='light'] .visit-btn:hover {
+    background: #333;
+}
+
 .contribution-graph-container {
     flex: 1;
     min-width: 300px;
@@ -163,11 +191,21 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
+[data-theme='light'] .contribution-graph-container {
+    background: var(--bg-elevated);
+    border-color: var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
 .contribution-graph-container h3 {
     margin-bottom: 2rem;
     font-size: 1.8rem;
     color: #fff;
     font-weight: 700;
+}
+
+[data-theme='light'] .contribution-graph-container h3 {
+    color: var(--fg);
 }
 
 .calendar-wrapper {

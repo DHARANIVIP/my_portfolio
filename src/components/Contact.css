@@ -86,6 +86,12 @@
     transform: translateY(-3px);
 }
 
+[data-theme='light'] .info-card {
+    background: var(--bg-elevated);
+    border-color: var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
 .info-card-icon {
     font-size: 2rem;
     color: #00d4ff;
@@ -130,6 +136,12 @@
     z-index: 2;
 }
 
+[data-theme='light'] .modern-contact-form {
+    background: var(--bg-elevated);
+    border-color: var(--border);
+    box-shadow: var(--shadow-soft);
+}
+
 .form-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -153,6 +165,14 @@
     text-transform: capitalize;
 }
 
+[data-theme='light'] .form-group label {
+    color: var(--accent);
+}
+
+[data-theme='light'] .label-icon {
+    color: var(--accent);
+}
+
 .label-icon {
     font-size: 1rem;
     color: #00d4ff;
@@ -168,6 +188,20 @@
     font-size: 0.95rem;
     font-family: inherit;
     transition: all 0.3s ease;
+}
+
+[data-theme='light'] .form-group input,
+[data-theme='light'] .form-group textarea {
+    background: var(--bg);
+    border-color: var(--border);
+    color: var(--fg);
+}
+
+[data-theme='light'] .form-group input:focus,
+[data-theme='light'] .form-group textarea:focus {
+    background: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .form-group input::placeholder,
@@ -290,6 +324,13 @@
     padding: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+}
+
+[data-theme='light'] .calendly-container,
+[data-theme='light'] .google-calendar-container {
+    background: var(--bg-elevated);
+    border-color: var(--border);
+    box-shadow: var(--shadow-soft);
 }
 
 .google-calendar-container iframe {
