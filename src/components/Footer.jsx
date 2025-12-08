@@ -5,7 +5,7 @@ export function Footer() {
   const socialLinks = [
     { icon: FaGithub, label: 'GitHub', url: 'https://github.com/DHARANIVIP' },
     { icon: FaLinkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/dharani-v' },
-    { icon: FaEnvelope, label: 'Email', url: 'mailto:vvdharani57@gmail.com' },
+    { icon: FaEnvelope, label: 'Email', url: 'mailto:vvdharani58@gmail.com' },
     { icon: FaTwitter, label: 'Twitter', url: 'https://x.com/' },
     { icon: FaInstagram, label: 'Instagram', url: 'https://instagram.com/' },
   ]
