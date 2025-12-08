@@ -281,8 +281,10 @@ export function Hero() {
                 </div>
             </div>
 
+
             {/* Joke Section */}
             <JokeSection />
+
             {/* Let's Talk Section */}
             <LetsTalkSection />
 
